@@ -12,10 +12,9 @@
     </style>
 </head>
 <body>
-    <div id="path">
-        <img id="PacMan" src="PacMan1.png" width="100" onclick="Run()" style="position:absolute">
-    </div>
-    <script>
+    <img id="PacMan" src="PacMan1.png" width="100" onclick="Run()" style="position:absolute">
+
+<script>
         const imgArray = [
         ['PacMan1.png', 'PacMan2.png'],
         ['PacMan3.png', 'PacMan4.png']
@@ -61,11 +60,6 @@
             document.body.appendChild(dot);
         }
 
-        // TODO: Add a Javascript setInterval() method that will call the Run() function above every 200 milliseconds. Note: in the video, Dr. Williams uses the setTimeout() method, but here we are going to use a slightly different
-        // method called setInterval(), so that you can have practice using this method.
-        // Inside of the Run() function you will also have to add an extra argument "pageWidth", which is declared on line 4 when you call the checkPageBounds() function below. 
-        setInterval(Run, 100);
-
         // This function determines the direction of PacMan based on screen edge detection. 
         function checkPageBounds(direction, imgWidth, pos, pageWidth) {
             //
@@ -79,8 +73,11 @@
             }
             return direction;
         }
-            
-        Run();
+
+        // TODO: Add a Javascript setInterval() method that will call the Run() function above every 200 milliseconds. Note: in the video, Dr. Williams uses the setTimeout() method, but here we are going to use a slightly different
+        // method called setInterval(), so that you can have practice using this method.
+        // Inside of the Run() function you will also have to add an extra argument "pageWidth", which is declared on line 4 when you call the checkPageBounds() function below. 
+        setInterval(Run, 100);
     </script>
 </body>
 
